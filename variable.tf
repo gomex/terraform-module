@@ -14,7 +14,7 @@ variable "enable_sg" {
 }
 
 variable "ingress_ports" {
-  type        = list
+  type        = list(number)
   default     = []
   description = "List of ingress ports to allow"
 }
