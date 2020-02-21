@@ -6,8 +6,7 @@ data "aws_security_group" "default" {
   }
 
   tags = {
-    name   = "produto"
-    values = "default"
+    produto   = "default"
   }
 }
 
