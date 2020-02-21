@@ -5,7 +5,7 @@ data "aws_security_group" "default" {
     values = ["default"] 
   }
 
-  filter {
+  tags = {
     name   = "produto"
     values = ["default"] 
   }
