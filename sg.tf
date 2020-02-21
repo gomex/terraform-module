@@ -1,4 +1,14 @@
-resource "aws_security_group" "allow-traffic" {
+data "aws_security_group" "default" {
+  id = "${var.security_group_id}"
+
+  filter {
+    name   = "name"
+    values = "default"
+  }
+}
+
+
+resource "aws_security_group" "optional" {
   count = var.enable_sg ? 1 : 0
   name        = "allow-traffic"
 
