@@ -20,16 +20,6 @@ resource "aws_security_group" "allow-traffic" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   
-  ingress {
-    # TLS (change to whatever ports you need)
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    # Please restrict your ingress to only necessary IPs and ports.
-    # Opening to 0.0.0.0/0 can lead to security vulnerabilities.
-    cidr_blocks = # add a CIDR block here
-  }
-
   egress {
     from_port       = 0
     to_port         = 0
