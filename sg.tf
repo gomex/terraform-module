@@ -13,7 +13,7 @@ data "aws_security_group" "default" {
 
 resource "aws_security_group" "optional" {
   count = var.enable_sg ? 1 : 0
-  name        = "allow-traffic"
+  name        = "allow-traffic-${var.name}"
 
   dynamic "ingress" {
     iterator = port
