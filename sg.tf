@@ -1,5 +1,4 @@
 data "aws_security_group" "default" {
-  id = "${var.security_group_id}"
 
   filter {
     name   = "name"
