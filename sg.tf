@@ -2,7 +2,7 @@ data "aws_security_group" "default" {
 
   filter {
     name   = "name"
-    values = "default"
+    values = ["default"] 
   }
 }
 
